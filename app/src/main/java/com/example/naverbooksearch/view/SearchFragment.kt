@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.naverbooksearch.adapter.SearchBookAdapter
 import com.example.naverbooksearch.databinding.FragmentSearchBinding
@@ -42,12 +41,14 @@ class SearchFragment: Fragment() {
 
         }
 
+
+
         viewModel.searchResultLiveData.observe(viewLifecycleOwner) {
             searchBookAdapter.addAll(it)
         }
 
         searchBookAdapter.setOnItemClickListener {
-            val action = SearchFragmentDirections.actionSearchFragmentToBookFragment(it)
+            val action = SearchFragmentDirections.actionFragmentSearchToFragmentBook(it)
             findNavController().navigate(action)
         }
 

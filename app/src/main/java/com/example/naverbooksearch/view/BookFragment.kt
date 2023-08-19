@@ -2,13 +2,12 @@ package com.example.naverbooksearch.view
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import com.example.naverbooksearch.R
 import com.example.naverbooksearch.databinding.FragmentBookBinding
 
 
@@ -31,8 +30,7 @@ class BookFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        val item = args.Item
-
+        val item = args.item
 
         binding.webview.apply {
             webViewClient = WebViewClient()

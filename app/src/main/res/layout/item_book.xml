@@ -23,19 +23,41 @@
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:autoSizeMaxTextSize="20dp"
             android:autoSizeMinTextSize="8dp"
             android:autoSizeTextType="uniform"
             android:ellipsize="end"
             android:gravity="center"
-            android:lines="2"
+            android:lines="1"
             android:padding="5dp"
-            app:layout_constraintBottom_toBottomOf="@id/image"
+            app:layout_constraintBottom_toTopOf="@id/author"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/image"
             app:layout_constraintTop_toTopOf="@id/image" />
+        
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:autoSizeMinTextSize="8dp"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/pubdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:autoSizeMinTextSize="8dp"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@id/author"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

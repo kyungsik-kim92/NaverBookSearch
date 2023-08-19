@@ -11,7 +11,7 @@
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
         <action
-            android:id="@+id/action_searchFragment_to_bookFragment"
+            android:id="@+id/action_fragment_search_to_fragment_book"
             app:destination="@id/fragment_book"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
@@ -24,7 +24,7 @@
         android:label="fragment_book"
         tools:layout="@layout/fragment_book" >
         <argument
-            android:name="Item"
+            android:name="item"
             app:argType="com.example.naverbooksearch.model.Item" />
     </fragment>
 </navigation>

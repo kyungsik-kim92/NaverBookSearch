@@ -14,5 +14,9 @@ class SearchBookViewHolder (private val binding: ItemBookBinding) :
         Glide.with(itemView).load(item.image).into(binding.image)
 
         binding.title.text = item.title
+
+        binding.author.text = "지은이: ${item.author}"
+
+        binding.pubdate.text = item.pubdate.substring(0 until 4)
     }
 }
