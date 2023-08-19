@@ -1,6 +1,10 @@
 package com.example.naverbooksearch.model
-import com.google.gson.annotations.SerializedName
 
+import android.os.Parcelable
+import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Item(
     @SerializedName("author")
     val author: String,
@@ -20,4 +24,4 @@ data class Item(
     val publisher: String,
     @SerializedName("title")
     val title: String
-)
+) : Parcelable
